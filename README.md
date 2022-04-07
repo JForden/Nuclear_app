@@ -1,15 +1,12 @@
 # nuclear_app
 
-A new Flutter project.
+This is an open source project by novice programmers. We are attempting to recreate the Nuclear app developed by NukeOP
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Once flutter is properly installed, run the command from the main directory. 
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+```flutter run```
 
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
