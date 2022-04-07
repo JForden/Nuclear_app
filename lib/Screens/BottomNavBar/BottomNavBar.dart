@@ -14,43 +14,30 @@ class BottomBarWidget extends StatefulWidget {
 }
 
 class _BottomBarWidgetState extends State<BottomBarWidget> {
-  int _selectedIndex = 1;
+  //page selection index
+  int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
 
 
+  //list of pages
   final List<Widget> _widgetOptions2 = [
     HomePage(),
     Search(),
     Playlists(),
   ];
 
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: Search',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: Playlists',
-      style: optionStyle,
-    ),
-  ];
-
   void _onItemTapped(int index) {
     print(index);
     setState(() {
-      _selectedIndex = index;
+      _selectedIndex = index;//we set the state to the index of the selected page and then we rebuild the widget
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _widgetOptions2[_selectedIndex],
+      body: _widgetOptions2[_selectedIndex],//the body is the current page, we use the index to grab the correct page via the list of pages
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -71,7 +58,7 @@ class _BottomBarWidgetState extends State<BottomBarWidget> {
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.amber[800],
-        onTap: _onItemTapped,
+        onTap: _onItemTapped,//when a user taps the bottom navigation bar, we call the function to change the page
         //OnTap: ()
       ),
     );
